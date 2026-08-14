@@ -1,11 +1,15 @@
-function showMessage(from, text) {
-  from = "*" + from + "*";
-
-  alert(from + ": " + text);
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm("Do you have permission from your parents?");
+  }
 }
 
-let from = "Ann ";
+let age = prompt("how old are you?", 18);
 
-showMessage(from, "Hello");
-
-alert(from);
+if (checkAge(age)) {
+  alert("Access granted");
+} else {
+  alert("Access denied");
+}
