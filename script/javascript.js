@@ -1,15 +1,29 @@
+/**
+Rewrite the function using '?' or '||'
+importance: 4
+The following function returns true if the parameter age is greater than 18.
+
+Otherwise it asks for a confirmation and returns its result.
+
 function checkAge(age) {
-  if (age >= 18) {
+  if (age > 18) {
     return true;
   } else {
-    return confirm("Do you have permission from your parents?");
+    return confirm('Did parents allow you?');
   }
 }
+Rewrite it, to perform the same, but without if, in a single line.
 
-let age = prompt("how old are you?", 18);
+Make two variants of checkAge:
 
-if (checkAge(age)) {
-  alert("Access granted");
-} else {
-  alert("Access denied");
+Using a question mark operator ?
+Using OR ||
+ */
+
+function checkAge(age) {
+  return age > 18 ? true : confirm("Did parents allow you?");
+}
+
+function checkAge(age) {
+  return age > 18 ? true || confirm("Did parents allow you?");
 }
