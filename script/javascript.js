@@ -1,29 +1,11 @@
-/**
-Rewrite the function using '?' or '||'
-importance: 4
-The following function returns true if the parameter age is greater than 18.
-
-Otherwise it asks for a confirmation and returns its result.
-
-function checkAge(age) {
-  if (age > 18) {
-    return true;
+function min(a, b) {
+  if (a < b) {
+    return a;
   } else {
-    return confirm('Did parents allow you?');
+    return b;
   }
 }
-Rewrite it, to perform the same, but without if, in a single line.
 
-Make two variants of checkAge:
-
-Using a question mark operator ?
-Using OR ||
- */
-
-function checkAge(age) {
-  return age > 18 ? true : confirm("Did parents allow you?");
-}
-
-function checkAge(age) {
-  return age > 18 ? true || confirm("Did parents allow you?");
-}
+console.log(min(10, 5));
+console.log(min(-10, -20));
+console.log(min(100, 100));
