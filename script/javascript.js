@@ -1,29 +1,19 @@
-let double = (n) => n * 2;
-// roughly the same as: let double = function(n) { return n * 2 }
-alert(double(3)); // 6
+function capitalize(string) {
+  string = string.toLowerCase();
 
-let sum = (a, b) => a + b;
+  let firstLetter = string[0].toUpperCase();
 
-/* This arrow function is a shorter form of:
+  let remainingLetters = string.slice(1);
 
-let sum = function(a, b) {
-  return a + b;
-};
-*/
+  return firstLetter + remainingLetters;
+}
 
-alert(sum(1, 2)); // 3
+console.log(capitalize("abcd"));
+console.log(capitalize("ABCD"));
+console.log(capitalize("aBcD"));
 
-let sayHi = () => alert("Hello!");
-sayHi();
+function lastLetter(string) {
+  return string.slice(3);
+}
 
-let age = prompt("What is your age?");
-let welcome = age < 18 ? () => alert("Hello!") : () => alert("Greetings!");
-welcome();
-
-let sum = (a, b) => {
-  // the curly brace opens a multiline function
-  let result = a + b;
-  return result; // if we use curly braces, then we need an explicit "return"
-};
-
-alert(sum(1, 2)); // 3
+console.log(lastLetter("abcd"));
