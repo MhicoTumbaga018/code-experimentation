@@ -1,19 +1,23 @@
-function capitalize(string) {
-  string = string.toLowerCase();
+/** When a user inputs a number*/
+let answer = parseInt(
+  prompt("Please enter the number you would like to FizzBuzz up to:"),
+);
 
-  let firstLetter = string[0].toUpperCase();
+/** Loop from 1 to the entered number */
 
-  let remainingLetters = string.slice(1);
+for (let i = 1; i <= answer; i++) {
+  /**If the current number is divisible by 3 and 5 then print "FizzBuzz" */
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    /** If the current number is divisible by 3 then print "Fizz" */
+    console.log("Fizz");
 
-  return firstLetter + remainingLetters;
+    /**If the current number is divisible by 5 then print "Buzz" */
+  } else if (i % 5 == 0) {
+    console.log("Buzz");
+    /**Otherwise print the current number */
+  } else {
+    console.log(i);
+  }
 }
-
-console.log(capitalize("abcd"));
-console.log(capitalize("ABCD"));
-console.log(capitalize("aBcD"));
-
-function lastLetter(string) {
-  return string.slice(3);
-}
-
-console.log(lastLetter("abcd"));
