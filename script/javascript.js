@@ -1,14 +1,10 @@
-function toUpper(string) {
-  return string.toUpperCase();
+function lCat(cat) {
+  return cat.startsWith("L");
 }
 
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-for (const cat of cats) {
-  console.log(cat);
-}
+const filtered = cats.filter(lCat);
 
-const upperCats = cats.map(toUpper);
-
-console.log(upperCats);
-// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+console.log(filtered);
+// [ "Leopard", "Lion" ]
