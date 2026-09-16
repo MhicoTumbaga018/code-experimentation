@@ -1,10 +1,5 @@
-function lCat(cat) {
-  return cat.startsWith("L");
-}
-
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-const filtered = cats.filter(lCat);
-
-console.log(filtered);
-// [ "Leopard", "Lion" ]
+for (let i = 0; i < cats.length; i++) {
+  console.log(cats[i]);
+}
