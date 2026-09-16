@@ -1,5 +1,14 @@
-const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "My cats are called ";
 
 for (let i = 0; i < cats.length; i++) {
-  console.log(cats[i]);
+  if (i === cats.length - 1) {
+    myFavoriteCats += `and ${cats[i]}. `;
+  } else {
+    myFavoriteCats += `${cats[i]}, `;
+  }
 }
+
+console.log(myFavoriteCats);
+// "My cats are called Pete, Biggles, Jasmine. "
